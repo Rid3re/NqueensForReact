@@ -1,0 +1,50 @@
+
+#chessboard {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    width: 800px;
+    height: 800px;
+}
+
+.tile {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    border : 2px solid darkgrey;
+}
+
+.white-tile {
+    background-color: #ebecd0;
+}
+
+.black-tile {
+    background-color: #DEB887;
+}
+
+.forbidden-tile {
+    background-color: indianred; /* 배치 불가능한 타일의 색상을 약간 진하게 설정 */
+}
+
+.queen {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top : 50%;
+    left : 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+     /* 이미지 위로 마우스 이벤트가 전달되지 않도록 설정 */
+}
+
+.message {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.8); /* 투명도 조절 가능 */
+    padding: 10px;
+}
